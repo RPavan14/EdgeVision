@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.EdgeVisionPro" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">#9E7FFF</item>
+        <item name="colorPrimaryVariant">#7C3AED</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#38BDF8</item>
+        <item name="colorSecondaryVariant">#0EA5E9</item>
+        <item name="colorOnSecondary">#000000</item>
+        <item name="android:statusBarColor">#171717</item>
+        <item name="android:navigationBarColor">#171717</item>
+    </style>
+</resources>

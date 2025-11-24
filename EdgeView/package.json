@@ -1,0 +1,19 @@
+{
+  "name": "edgevision-pro",
+  "version": "1.0.0",
+  "description": "Real-Time Edge Detection Viewer with Android native OpenCV and TypeScript web viewer",
+  "main": "index.js",
+  "scripts": {
+    "build-web": "tsc && cp web/index.html dist/ && cp -r web/assets dist/",
+    "serve-web": "cd dist && python3 -m http.server 8080",
+    "dev-web": "npm run build-web && npm run serve-web",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/node": "^20.10.5"
+  },
+  "keywords": ["opencv", "android", "edge-detection", "opengl", "typescript"],
+  "author": "EdgeVision Team",
+  "license": "MIT"
+}

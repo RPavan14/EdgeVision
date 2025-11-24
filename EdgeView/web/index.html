@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdgeVision Pro - Web Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">📱</div>
+                    <h1>EdgeVision Pro</h1>
+                </div>
+                <div class="status-indicator">
+                    <div class="status-dot active"></div>
+                    <span>Live Processing</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="viewer-container">
+                <div class="image-display">
+                    <canvas id="imageCanvas" width="640" height="480"></canvas>
+                    <div class="overlay-controls">
+                        <div class="control-group">
+                            <button id="toggleMode" class="control-btn primary">
+                                <span class="btn-icon">🔄</span>
+                                Toggle Mode
+                            </button>
+                            <button id="captureFrame" class="control-btn secondary">
+                                <span class="btn-icon">📸</span>
+                                Capture
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-panel">
+                    <div class="info-card">
+                        <h3>Performance Metrics</h3>
+                        <div class="metrics-grid">
+                            <div class="metric">
+                                <span class="metric-label">FPS</span>
+                                <span class="metric-value" id="fpsValue">15.2</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Resolution</span>
+                                <span class="metric-value" id="resolutionValue">1920×1080</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Processing</span>
+                                <span class="metric-value" id="processingValue">Edge Detection</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Latency</span>
+                                <span class="metric-value" id="latencyValue">42ms</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Processing Settings</h3>
+                        <div class="settings-controls">
+                            <div class="setting-item">
+                                <label for="cannyLow">Canny Low Threshold</label>
+                                <input type="range" id="cannyLow" min="10" max="100" value="50">
+                                <span class="setting-value">50</span>
+                            </div>
+                            <div class="setting-item">
+                                <label for="cannyHigh">Canny High Threshold</label>
+                                <input type="range" id="cannyHigh" min="100" max="300" value="150">
+                                <span class="setting-value">150</span>
+                            </div>
+                            <div class="setting-item">
+                                <label for="blurRadius">Blur Radius</label>
+                                <input type="range" id="blurRadius" min="1" max="10" value="5">
+                                <span class="setting-value">5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Connection Status</h3>
+                        <div class="connection-info">
+                            <div class="connection-item">
+                                <span class="connection-label">Android Device</span>
+                                <span class="connection-status connected">Connected</span>
+                            </div>
+                            <div class="connection-item">
+                                <span class="connection-label">WebSocket</span>
+                                <span class="connection-status" id="wsStatus">Connecting...</span>
+                            </div>
+                            <div class="connection-item">
+                                <span class="connection-label">Last Update</span>
+                                <span class="connection-time" id="lastUpdate">Just now</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 EdgeVision Pro. Real-time edge detection powered by OpenCV.</p>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Documentation</a>
+                    <a href="#" class="footer-link">GitHub</a>
+                    <a href="#" class="footer-link">Support</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
